@@ -1,5 +1,4 @@
 import datetime
-
 import disnake
 from disnake.ext import commands
 
@@ -17,7 +16,6 @@ class ServerCommand(commands.Cog):
             description=f"Название сервера: {inter.guild.name}\nКоличество участников: {inter.guild.member_count}"
         )
         await inter.response.send_message(embed=embed)
-
 
 
 def setup(bot):

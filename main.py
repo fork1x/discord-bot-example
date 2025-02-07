@@ -2,6 +2,7 @@ import disnake
 import os
 from disnake.ext import commands
 
+
 bot = commands.Bot(command_prefix="!", intents=disnake.Intents.all(), owner_id="537976988573368323",
                    activity=disnake.Game("/help - помощь", status=disnake.Status.online))
 bot.remove_command("help")
