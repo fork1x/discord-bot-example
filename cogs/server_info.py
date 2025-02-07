@@ -40,7 +40,6 @@ class ServerCommand(commands.Cog):
         ).set_thumbnail(url=inter.guild.icon.url)
 
         await inter.response.send_message(embed=embed)
-        print(inter.guild.preferred_locale)
 
 
 def setup(bot):

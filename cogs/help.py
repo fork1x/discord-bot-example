@@ -2,12 +2,12 @@ import disnake
 import os
 from disnake.ext import commands
 
-
 cogs_folder = "cogs"
-cogs_name = os.listdir(cogs_folder)
-if ("__pycache__" in cogs_name) and ("events.py" in cogs_name):
-    cogs_name.remove("__pycache__")
-    cogs_name.remove("events.py")
+cogs_name = []
+for root, dirs, files in os.walk(cogs_folder):
+    for file in files:
+        if file.endswith(".py") and file != "__init__.py":
+            cogs_name.append(file)
 
 
 class HelpCommand(commands.Cog):
