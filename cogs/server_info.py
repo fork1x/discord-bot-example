@@ -1,4 +1,3 @@
-import datetime
 import disnake
 from disnake.ext import commands
 
@@ -11,7 +10,7 @@ class ServerCommand(commands.Cog):
     async def server_info(self, inter):
         embed = disnake.Embed(
             title="Информация о сервере",
-            timestamp=datetime.datetime.utcnow(),
+            timestamp=disnake.utils.utcnow(),
             colour=disnake.Colour.green(),
             description=f"Название сервера: {inter.guild.name}\nКоличество участников: {inter.guild.member_count}"
         )

@@ -1,6 +1,5 @@
 import disnake
 import os
-from datetime import datetime
 from disnake.ext import commands
 
 
@@ -21,7 +20,7 @@ class HelpCommand(commands.Cog):
             title="Это помощь",
             description=f"Команды доступные в боте: {', '.join([f'`/{cog[:-3]}`' for cog in cogs_name])}.",
             colour=disnake.Colour.green(),
-            timestamp=datetime.utcnow()
+            timestamp=disnake.utils.utcnow()
         )
         await inter.response.send_message(embed=embed)
 
